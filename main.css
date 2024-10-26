@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 1024px;
+    margin: auto;
+}
+
+header {
+    padding: 8px;
+    position: sticky;
+    top: 0;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+}
+.menu__item {
+    list-style-type: none;
+    padding: 8px;
+}
+.menu__item .botao-meio {
+    padding: 8px;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+}
+.menu__item a {
+    color: black;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+.menu__item a:hover {
+    color: darkred;
+}
+
+#alertas {
+    text-align: center;
+}
+#alertas nav {
+    text-align: center;
+}
+#alertas nav .tab__button {
+    padding: 8px;
+    width: 200px;
+    border: none;
+    background-color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 32px 1vw;
+    cursor: pointer;
+}
+#alertas nav .tab__button:hover {
+    transform: scale(1.1);
+}
+#alertas nav .tab__button--is-active {
+    border-bottom: 5px solid black;
+}
+#alertas .container {
+    text-align: start;
+}
+#alertas .tab__content {
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+#alertas .tab__content--is-active {
+    display: grid;
+}
+#alertas .tab__content li {
+    border-radius: 8px;
+    background-color: #e7e6e6;
+    list-style-type: none;
+    margin-bottom: 64px;
+}
+#alertas .tab__content li img {
+    max-width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+#alertas .tab__content li .card-content {
+    padding: 30px;
+}
+#alertas .tab__content li .card-content h3 {
+    cursor: pointer;
+}
+#alertas .tab__content li .card-content h3:hover {
+    text-decoration: underline;
+}
+#alertas .tab__content li .card-content p {
+    margin: 16px 0;
+}
+#alertas .tab__content li .card-content time {
+    color: #929292;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+#alertas a {
+    text-align: center;
+    color: #929292;
+    text-decoration: none;
+    border: 1px solid gray;
+    padding: 5px 16px;
+    border-radius: 8px;
+}
+#alertas a:hover {
+    background-color: darkred;
+    border: none;
+    color: #fff;
+}
