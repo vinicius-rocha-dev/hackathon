@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 1024px;
+    margin: auto;
+}
+
+header {
+    padding: 8px;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.123);
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+}
+.menu__item {
+    list-style-type: none;
+    padding: 8px;
+}
+.menu__item .botao-meio {
+    padding: 8px;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+}
+.menu__item a {
+    color: black;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+.menu__item a:hover {
+    color: darkred;
+}
+
+/* Section Hero  */
+
+#hero{
+    background-image: url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px;
+    text-align: right;
+}
+
+/* Section Alertas */
+
+#alertas {
+    text-align: center;
+    padding-bottom: 5.4vw;
+}
+#alertas nav {
+    text-align: center;
+}
+#alertas nav .tab__button {
+    padding: 8px;
+    width: 200px;
+    border: none;
+    background-color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 32px 1vw;
+    cursor: pointer;
+}
+#alertas nav .tab__button:hover {
+    transform: scale(1.1);
+}
+#alertas nav .tab__button--is-active {
+    border-bottom: 5px solid forestgreen;
+    color: black;
+}
+#alertas .container {
+    text-align: start;
+}
+#alertas .tab__content {
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+#alertas .tab__content--is-active {
+    display: grid;
+}
+#alertas .tab__content li {
+    border-radius: 8px;
+    background-color: #e7e6e6;
+    list-style-type: none;
+    margin-bottom: 64px;
+}
+#alertas .tab__content li img {
+    max-width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+#alertas .tab__content li .card-content {
+    padding: 30px;
+}
+#alertas .tab__content li .card-content h3 {
+    cursor: pointer;
+}
+#alertas .tab__content li .card-content h3:hover {
+    text-decoration: underline;
+}
+#alertas .tab__content li .card-content p {
+    margin: 16px 0;
+}
+#alertas .tab__content li .card-content time {
+    color: #929292;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+#alertas a {
+    text-align: center;
+    color: #929292;
+    text-decoration: none;
+    border: 1px solid gray;
+    padding: 5px 16px;
+    border-radius: 8px;
+}
+#alertas a:hover {
+    background-color: darkred;
+    border: none;
+    color: #fff;
+}
+
+.tab__content span{
+    display: flex;
+}
+
+.tab__content span .alert{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+#amarelo .alert{
+    background-color: rgb(255, 255, 0);
+    border: 1px solid rgb(150, 150, 0);
+}
+
+#laranja .alert{
+    background-color: orange;
+    border: 1px solid rgb(158, 103, 0);
+}
+
+#vermelho .alert{
+    background-color: red;
+    border: 1px solid rgb(139, 0, 0);
+}
+
+/* Informação */
+.faq{
+    padding: 0 5.6vw;
+    transition: 0.5s ease;
+    margin-top: 40px;
+}
+
+.faq__content{
+    max-width: 100%;
+}
+
+.faq__question{
+    background-color: #8f8e8e;
+    color: #fff;
+    padding: 16px;
+    cursor: pointer;
+    margin-top: 16px;
+    border-bottom: 1px solid #8f8e8e;
+    border-radius: 8px 8px 0 0;
+    font-weight: bold;
+}
+
+.faq__answer{
+    background-color: #e7e6e6;
+    color: black;
+    padding: 16px;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    margin-bottom: 16px;
+    display: none;
+    transition: max-height 0.4s ease-out;
+}
+
+.faq__answer li{
+    list-style-position: inside;
+}
+
+@media screen and (max-width: 767px) {
+    header{
+        position: relative;
+    }
+    
+    header .container{
+        display: block;
+    }
+
+    .menu{
+        display: block;
+    }
+
+    header nav{
+        margin-top: 20px;
+    }
+
+    .menu__item .botao-meio{
+        border: none;
+        padding: 0;
+    }
+
+    #hero > .container{
+        padding: 1vw;
+    }
+
+    #hero > .container h1{
+        width: 200px;
+    }
+
+    #alertas{
+        padding: 5.6vw;
+    }
+
+    #alertas nav{
+        display: flex;
+        text-align: center;
+    }
+
+    #alertas .tab__content--is-active{
+        display: block;
+    }
+}
